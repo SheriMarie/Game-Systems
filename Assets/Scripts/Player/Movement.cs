@@ -77,10 +77,19 @@ public class Movement : MonoBehaviour
 
                 if (Input.GetButton("Jump"))
                 {
-                    _moveDirection.y = _jumpSpeed;
+                    _moveDirection.y = _jumpSpeed;     //our moveDir.y is equal to our jump speed
                 }
 
-                //our moveDir.y is equal to our jump speed
+                if (Input.GetButton("Sprint"))
+                {
+                    _movespeed = _sprintSpeed;    
+                }
+
+                if (Input.GetButton("Crouch"))
+                {
+                    _movespeed = _crouchSpeed;
+                }
+
 
             }
 
